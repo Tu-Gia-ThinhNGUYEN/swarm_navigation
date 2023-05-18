@@ -1,0 +1,27 @@
+digraph G {
+"base_footprint" -> "base_link"[label="Broadcaster: /swarm3/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 763.189 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "caster_back_link"[label="Broadcaster: /swarm3/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 763.189 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "imu_link"[label="Broadcaster: /swarm3/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 763.189 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "base_scan"[label="Broadcaster: /swarm3/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 763.189 sec old)\nBuffer length: 0.000 sec\n"];
+"swarm3/odom" -> "swarm3/base_footprint"[label="Broadcaster: /gazebo\nAverage rate: 30.909 Hz\nMost recent transform: 763.169 ( 0.020 sec old)\nBuffer length: 1.100 sec\n"];
+"base_link" -> "wheel_left_link"[label="Broadcaster: /swarm2/robot_state_publisher\nAverage rate: 91.644 Hz\nMost recent transform: 763.183 ( 0.006 sec old)\nBuffer length: 1.113 sec\n"];
+"base_link" -> "wheel_right_link"[label="Broadcaster: /swarm2/robot_state_publisher\nAverage rate: 91.644 Hz\nMost recent transform: 763.183 ( 0.006 sec old)\nBuffer length: 1.113 sec\n"];
+"swarm1/odom" -> "swarm1/base_footprint"[label="Broadcaster: /gazebo\nAverage rate: 30.909 Hz\nMost recent transform: 763.182 ( 0.007 sec old)\nBuffer length: 1.100 sec\n"];
+"swarm2/odom" -> "swarm2/base_footprint"[label="Broadcaster: /gazebo\nAverage rate: 30.909 Hz\nMost recent transform: 763.183 ( 0.006 sec old)\nBuffer length: 1.100 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 763.189"[ shape=plaintext ] ;
+ }->"base_footprint";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 763.189"[ shape=plaintext ] ;
+ }->"swarm3/odom";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 763.189"[ shape=plaintext ] ;
+ }->"swarm1/odom";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 763.189"[ shape=plaintext ] ;
+ }->"swarm2/odom";
+}
