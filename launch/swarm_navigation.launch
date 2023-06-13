@@ -1,6 +1,6 @@
 <launch>
 <!-- map config-->
-<arg name="map" default="map_c304_2.yaml" />
+<arg name="map" default="mymap.yaml" />
 
     <!-- Run map server and load map-->
     <node name="map_server" pkg="map_server" type="map_server" args="$(find swarm_navigation)/maps/$(arg map)"/>
@@ -23,8 +23,8 @@
     <!-- Load Rviz -->
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find swarm_navigation)/rviz/nav5.rviz"/>
 <!-- Static tf between map and odom -->
-  <arg name="static_tf" default="true" />
-  <node if="$(arg static_tf)" pkg="tf2_ros" type="static_transform_publisher" name="odom_wrt_map_tf" args="0 0 0 0 0 0 sw1/odom sw1/map" />
+  <!-- <arg name="static_tf" default="true" />
+  <node if="$(arg static_tf)" pkg="tf2_ros" type="static_transform_publisher" name="odom_wrt_map_tf" args="0 0 0 0 0 0 sw1/odom sw1/map" /> -->
 
   <!-- <node name="pictogram_server" pkg="swarm_choosestation" type="pictogram_server" args="$(find swarm_choosestation)/scripts/" output="screen"/>
   <node name="optimalPath_server" pkg="swarm_choosestation" type="optimalpath_server" args="$(find swarm_choosestation)/scripts/" output="screen"/> -->
